@@ -22,6 +22,7 @@
 #define SYM 2
 #define MOUSE 3
 #define MAGIC 4
+#define GAMING 5
 
 &caps_word {
     continue-list = <BACKSPACE DELETE UNDERSCORE MINUS>;
@@ -125,7 +126,7 @@
 
         default_layer {
             bindings = <
-            &none           &none    &none       &none       &none                                                                                                 &none     &none       &none       &none       &none
+            &none           &none    &none       &none       &none                                                                                                 &none     &none       &none       &none       &tog GAMING
             &none           &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                            &kp N6  &kp N7    &kp N8      &kp N9      &kp N0      &none
             &kp TAB         &kp Q    &kp W       &kp E       &kp R       &kp T                                                                             &kp Y   &kp U     &kp I       &kp O       &kp P       &kp BSLH
             &kp HYPER       &kp A    &kp S       &kp D       &kp F       &kp G                                                                             &kp H   &kp J     &kp K       &kp L       &kp SEMI    &kp SQT
@@ -175,6 +176,26 @@
             &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
             &none             &none               &none           &none           &none           &none           &none     &none     &none            &none     &none     &none       &none      &none      &none      &none      &none      &none
             &none             &none               &none           &none           &none                           &none     &none     &none            &none     &none     &none                  &none      &none      &none      &none      &none
+            >;
+        };
+
+        // This layer is a close derivative of the base layer, except it:
+        //
+        // - shifts the letter keys on the left hand over a column so WASD (and the surrounding
+        //   letter keys) can be used while keeping the hand in the correct position.
+        // - removes HYPER, because those modifiers are used for other things and I don't want to
+        //   hit it by accident
+        // - removes tap dances, because modifiers are sometimes tapped intentionally
+        // - removes (almost) everything on the right hand so it can't be hit by accident
+        // - removes layer toggles on the left hand so avoid accidental switches
+        gaming_layer {
+            bindings = <
+            &none           &none    &none       &none       &none                                                                                          &none        &none         &none        &none         &trans
+            &none           &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                   &none     &none        &none         &none        &none         &none
+            &kp TAB         &none    &kp Q       &kp W       &kp E       &kp R                                                                    &none     &none        &none         &none        &none         &none
+            &none           &none    &kp A       &kp S       &kp D       &kp F                                                                    &none     &none        &none         &none        &none         &none
+            &kp LSHFT       &none    &kp Z       &kp X       &kp C       &kp V   &none       &none      &kp ESC     &none     &none     &none     &none     &none        &none         &none        &none         &none
+            &kp LCTRL       &none    &none       &kp GRAVE   &kp LBKT            &kp SPACE   &kp LALT   &kp LGUI    &none     &none     &none               &none        &none         &none        &none         &none
             >;
         };
 
