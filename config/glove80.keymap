@@ -186,16 +186,17 @@
         // - removes HYPER, because those modifiers are used for other things and I don't want to
         //   hit it by accident
         // - removes tap dances, because modifiers are sometimes tapped intentionally
-        // - removes (almost) everything on the right hand so it can't be hit by accident
         // - removes layer toggles on the left hand so avoid accidental switches
+        // - replaces GUI (Windows key) with another ctrl to avoid minimizing and also nobody ever uses it
+        // - removes (almost) everything on the right hand so it can't be hit by accident
         gaming_layer {
             bindings = <
-            &none           &none    &none       &none       &none                                                                                          &none        &none         &none        &none         &trans
-            &none           &none    &kp N1      &kp N2      &kp N3      &kp N4                                                                   &none     &none        &none         &none        &none         &none
-            &kp TAB         &none    &kp Q       &kp W       &kp E       &kp R                                                                    &none     &none        &none         &none        &none         &none
-            &none           &none    &kp A       &kp S       &kp D       &kp F                                                                    &none     &none        &none         &none        &none         &none
-            &kp LSHFT       &none    &kp Z       &kp X       &kp C       &kp V   &none       &none      &kp ESC     &none     &none     &none     &none     &none        &none         &none        &none         &none
-            &kp LCTRL       &none    &none       &kp GRAVE   &kp LBKT            &kp SPACE   &kp LALT   &kp LGUI    &none     &none     &none               &none        &none         &none        &none         &none
+            &none           &none    &none       &none       &none                                                                                               &none        &none         &none        &none         &trans
+            &none           &none    &kp N1      &kp N2      &kp N3      &kp N4                                                                        &none     &none        &none         &none        &none         &none
+            &kp TAB         &none    &kp Q       &kp W       &kp E       &kp R                                                                         &none     &none        &none         &none        &none         &none
+            &none           &none    &kp A       &kp S       &kp D       &kp F                                                                         &none     &none        &none         &none        &none         &none
+            &kp LSHFT       &none    &kp Z       &kp X       &kp C       &kp V   &none       &none      &kp ESC     &magic MAGIC 0 &none     &none     &none     &none        &none         &none        &none         &none
+            &kp LCTRL       &none    &none       &kp GRAVE   &kp LBKT            &kp SPACE   &kp LALT   &kp LCTRL   &none          &none     &none               &none        &none         &none        &none         &none
             >;
         };
 
