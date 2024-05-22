@@ -126,33 +126,33 @@
 
         default_layer {
             bindings = <
-            &none           &none    &none       &none       &none                                                                                                 &none     &none       &none       &none       &tog GAMING
+            &kp ESC         &none    &none       &none       &none                                                                                                 &none     &none       &none       &none       &tog GAMING
             &none           &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                            &kp N6  &kp N7    &kp N8      &kp N9      &kp N0      &none
             &kp TAB         &kp Q    &kp W       &kp E       &kp R       &kp T                                                                             &kp Y   &kp U     &kp I       &kp O       &kp P       &kp BSLH
             &kp HYPER       &kp A    &kp S       &kp D       &kp F       &kp G                                                                             &kp H   &kp J     &kp K       &kp L       &kp SEMI    &kp SQT
-            &mt LSHFT LPAR  &kp Z    &kp X       &kp C       &kp V       &kp B   &mo SYM     &caps_word &kp ESC     &magic MAGIC 0 &kp DEL   &mo SYM       &kp N   &kp M     &kp COMMA   &kp DOT     &kp FSLH    &mt RSHFT RPAR
+            &mt LSHFT LPAR  &kp Z    &kp X       &kp C       &kp V       &kp B   &mo SYM     &caps_word &none       &magic MAGIC 0 &kp DEL   &mo SYM       &kp N   &kp M     &kp COMMA   &kp DOT     &kp FSLH    &mt RSHFT RPAR
             &kp LCTRL       &none    &none       &kp GRAVE   &kp LBKT            &kp SPACE   &kp LALT   &kp LGUI    &mo NAV        &kp BSPC  &kp ENTER             &kp RBKT  &kp MINUS   &none       &none       &mo MOUSE
             >;
         };
 
         navigation_layer {
             bindings = <
-            &none             &none   &none       &none       &none                                                                                         &none         &none        &none         &none       &none
+            &trans            &none   &none       &none       &none                                                                                         &none         &none        &none         &none       &none
             &none             &none   &none       &none       &none       &none                                                                   &none     &kp LG(MINUS) &kp LG(N0)   &kp LG(EQUAL) &none       &none
             &none             &none   &none       &none       &none       &none                                                                   &kp HOME  &kp PG_DN     &kp PG_UP    &kp END       &none       &none
             &trans            &none   &none       &none       &none       &none                                                                   &kp LEFT  &kp DOWN      &kp UP       &kp RIGHT     &none       &none
-            &trans            &none   &trans      &trans      &trans      &none   &trans     &none       &trans     &none     &none     &trans    &none     &kp C_VOL_DN  &kp C_MUTE   &kp C_VOL_UP  &none       &trans
+            &trans            &none   &trans      &trans      &trans      &none   &trans     &none       &none      &none     &none     &trans    &none     &kp C_VOL_DN  &kp C_MUTE   &kp C_VOL_UP  &none       &trans
             &trans            &none   &none       &none       &none               &none      &trans      &trans     &none     &none     &none               &kp C_PREV    &kp C_PP     &kp C_NEXT    &none       &none
             >;
         };
 
         symbol_layer {
             bindings = <
-            &none             &none    &none      &none       &none                                                                                         &none        &none         &none        &none         &none
+            &trans            &none    &none      &none       &none                                                                                         &none        &none         &none        &none         &none
             &none             &kp F1   &kp F2     &kp F3      &kp F4      &kp F5                                                                  &kp F6    &kp F7       &kp F8        &kp F9       &kp F10       &none
             &none             &none    &none      &none       &none       &none                                                                   &none     &none        &none         &none        &none         &none
             &trans            &kp EXCL &kp AT     &kp HASH    &kp DOLLAR  &kp PRCNT                                                               &kp CARET &kp AMPS     &kp ASTRK     &kp PLUS     &kp EQUAL     &none
-            &trans            &none    &none      &none       &none       &none   &trans     &none       &trans     &none     &none     &trans    &none     &none        &none         &none        &none         &trans
+            &trans            &none    &none      &none       &none       &none   &trans     &none       &none      &none     &none     &trans    &none     &none        &none         &none        &none         &trans
             &none             &none    &none      &none       &none               &none      &trans      &trans     &none     &none     &none               &none        &none         &none        &none         &none
             >;
         };
@@ -191,11 +191,11 @@
         // - removes (almost) everything on the right hand so it can't be hit by accident
         gaming_layer {
             bindings = <
-            &none           &none    &none       &none       &none                                                                                               &none        &none         &none        &none         &trans
+            &kp ESC         &none    &none       &none       &none                                                                                               &none        &none         &none        &none         &trans
             &none           &none    &kp N1      &kp N2      &kp N3      &kp N4                                                                        &none     &none        &none         &none        &none         &none
             &kp TAB         &none    &kp Q       &kp W       &kp E       &kp R                                                                         &none     &none        &none         &none        &none         &none
             &none           &none    &kp A       &kp S       &kp D       &kp F                                                                         &none     &none        &none         &none        &none         &none
-            &kp LSHFT       &none    &kp Z       &kp X       &kp C       &kp V   &none       &none      &kp ESC     &magic MAGIC 0 &none     &none     &none     &none        &none         &none        &none         &none
+            &kp LSHFT       &none    &kp Z       &kp X       &kp C       &kp V   &none       &none      &none       &magic MAGIC 0 &none     &none     &none     &none        &none         &none        &none         &none
             &kp LCTRL       &none    &none       &kp GRAVE   &kp LBKT            &kp SPACE   &kp LALT   &kp LCTRL   &none          &none     &none               &none        &none         &none        &none         &none
             >;
         };
