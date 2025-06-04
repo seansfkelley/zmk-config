@@ -18,6 +18,12 @@ which will spit out the firmware into `combined/glove80.uf`. Put the keyboard in
 ./flash.sh
 ```
 
+## Bootloader Mode
+
+Plug in and power up each half while holding the outermost bottom key and the key just above the home row on the middle finger (E and I by default).
+
+[Documentation.](https://docs.moergo.com/glove80-user-guide/customizing-key-layout/#putting-glove80-into-bootloader-for-firmware-loading)
+
 ## Repo Layout
 
 This repo includes a submodule import of [my fork of the official MoErgo fork of ZMK](https://github.com/seansfkelley/zmk). This makes it easier to build locally, as above, though the instructions from the MoErgo fork still apply (that is, those that build only on GitHub Actions). Make sure to keep the submodule updated if you make changes.
